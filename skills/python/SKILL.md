@@ -83,7 +83,7 @@ Rules:
 - Use `asyncio.sleep`, not `time.sleep`.
 - If blocking code is unavoidable, use `anyio.to_thread.run_sync()` or `asyncio.to_thread()`.
 
-## Summary Checklist
+## Code Quality Summary Checklist
 
 For each changed function/module:
 - strict mypy passes
@@ -96,3 +96,8 @@ For each changed function/module:
 - exceptions are narrow and intentional
 - syntax is modern
 - async code does not block
+
+# Style
+
+- Organize each module in this order: imports, constants, type aliases and classes, then functions.
+- Use blank lines to separate logical steps within functions, especially after setup and guard clauses, so each block is easy to scan.
